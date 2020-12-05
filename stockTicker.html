@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title> Stock Ticker</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style> 
+            body {
+                background-color: rgb(195, 210, 238);
+                text-align: center;
+                padding-top: 30px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            .wrapper {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .sub {
+                background-color:rgb(59, 102, 182);
+                color: white;
+                width: 100px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Stock Ticker</h1>
+        <h3> Please Enter Either a Stock Ticker or Company Name</h3>
+        <form method="POST" action="/collect">
+            <div class="wrapper">
+                <input type="text" name="nameInput" placeholder="company name"/>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="tickInput" placeholder="stock ticker"/>
+            </div>
+            <input class="sub" type="submit" value="Submit">
+        </form>
+    </body>
+</html>
