@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
+var port = process.env.PORT || 3000;
 const url = 'mongodb+srv://ellenzhao:chuggaa1113@cluster0.htvza.mongodb.net/?retryWrites=true&w=majority';
 
 MongoClient.connect(url, {useUnifiedTopology: true}) 
@@ -10,7 +11,7 @@ MongoClient.connect(url, {useUnifiedTopology: true})
     const collection = db.collection('companies');
     app.set('view engine', 'ejs');
 
-    app.listen(3000, function() {
+    app.listen(port, function() {
       console.log('listening on 3000');
     })
     app.use(bodyParser.urlencoded({extended:true}));
