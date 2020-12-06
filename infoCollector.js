@@ -16,7 +16,7 @@ MongoClient.connect(url, {useUnifiedTopology: true})
     })
     app.use(bodyParser.urlencoded({extended:true}));
     app.get('/', function(req, res) {
-      res.sendFile('stockTicker.html');
+      res.sendFile('https://unlabouring-acids.000webhostapp.com/stockTicker.html');
     })
     app.post('/collect', (req, res) => {
       if(req.body.nameInput != "") {
