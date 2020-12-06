@@ -40,7 +40,7 @@ MongoClient.connect(url, {useUnifiedTopology: true})
     })
     console.log("connected to database");
   })
-  .catch(error=>console.error(err))
+  .catch(error=>console.error(error))
 
 /*
 app.listen(3000, function() {
